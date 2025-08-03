@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+android:background="#0F0F0F"
+tools:context=".MainActivity">
+
+<!-- Camera Preview -->
+<androidx.camera.view.PreviewView
+    android:id="@+id/previewView"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_margin="16dp"
+    android:scaleType="fitCenter"
+    android:background="#1A1A1A" />
+
+<!-- Scan Line Animation -->
+<View
+    android:id="@+id/scanLine"
+    android:layout_width="200dp"
+    android:layout_height="4dp"
+    android:background="@android:color/holo_green_light" />
+
+<!-- QR Code result -->
+<TextView
+    android:id="@+id/txtResult"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#FFFFFF"
+    android:textSize="16sp"
+    android:padding="16dp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:text="Scan a QR code to see result here" />
+
+<!-- Bottom Panel -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#1C1C1C">
+
+    <!-- Flash Button -->
+    <ImageButton
+        android:id="@+id/btnFlash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_button_bg"
+        android:src="@android:drawable/ic_menu_manage"
+        android:contentDescription="Toggle Flash" />
+
+    <!-- Pick from Gallery -->
+    <ImageButton
+        android:id="@+id/btnGallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_button_bg"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Pick QR image from Gallery" />
+    <ImageButton
+        android:id="@+id/btnSwitch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_button_bg"
+        android:src="@android:drawable/ic_menu_revert"
+        android:contentDescription="Switch Camera" />
+</LinearLayout>
+
+
+</LinearLayout>
+
+
+
